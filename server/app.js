@@ -16,7 +16,7 @@ app.use(cors()); // Enable Cross Origin Resource Sharing across all routes. Basi
 /**** MongoDB Connection Configuration ****/
 const mongoose = require('mongoose'); // We need the mongoose library
 // Connection to local database named 'test'. If 'test' doesn't exists, it will automatically be created.
-mongoose.connect('mongodb://localhost/qa', {useNewUrlParser: true, useUnifiedTopology: true})
+mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost/qa', {useNewUrlParser: true, useUnifiedTopology: true})
     .then((connection) => { // When the Promise resolves, we do some stuff.
         console.log("Database connected");
         configureMongoDbSchemas();
