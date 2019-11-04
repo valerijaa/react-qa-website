@@ -13,6 +13,7 @@ const app = express(); // Get the express app.
 app.use(bodyParser.json()); // Parse JSON from the request body
 app.use(morgan('combined')); // Log all http requests to the console
 app.use(cors()); // Enable Cross Origin Resource Sharing across all routes. Basically open up your API to everyone.
+app.use(express.static('../client/build')); // Only needed when running build in production mode
 
 /**** MongoDB Connection Configuration ****/
 const mongoose = require('mongoose'); // We need the mongoose library
