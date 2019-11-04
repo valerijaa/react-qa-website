@@ -3,6 +3,7 @@ const express = require('express'); // The express.js library for writing the AP
 const bodyParser = require('body-parser'); // Parse all JSON in incoming requests automatically
 const morgan = require('morgan'); // Log out all http requests to the console
 const cors = require('cors');
+const path = require('path');
 
 /**** Configuration ****/
 const appName = "Express API";
