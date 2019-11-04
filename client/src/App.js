@@ -9,7 +9,9 @@ class App extends Component {
     constructor(props) {
         super(props);
 
-        this.url = 'http://localhost:8080/api/questions';
+        // API url from the file '.env' OR the file '.env.development'.
+        // The first file is only used in production.
+        this.url = `${process.env.REACT_APP_API_URL}/questions`;
         // This is my state data initialized
         this.state = {
             data: [] // Default state is empty, fetched questions from api will be stored here
