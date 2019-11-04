@@ -6,7 +6,8 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.1.1"
+    "react-scripts": "3.1.1",
+    "@reach/router": "^1.2.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,6 +31,5 @@
     ]
   },
   "devDependencies": {
-    "@reach/router": "^1.2.1"
   }
 }
